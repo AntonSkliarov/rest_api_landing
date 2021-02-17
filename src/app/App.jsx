@@ -1,11 +1,19 @@
 import React from 'react';
 import './App.sass';
+import { Main } from './Components/Main';
 
 export function App() {
-   return (
-     <div className="App">
-       <h1>Rest Api Page</h1>
-       <img src="/images/1.jpg" alt="First"/>
-     </div>
-   );
- }
+  const styles = {
+  backgroundImage: "url(/images/5.jpg)",
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'fixed'
+  }
+
+  return (
+    <div className="app" style={styles}>
+      <Main />
+    </div>
+  );
+}
