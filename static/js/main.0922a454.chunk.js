@@ -1,2 +1,0 @@
-(this.webpackJsonprest_api_landing=this.webpackJsonprest_api_landing||[]).push([[0],{9:function(e,n,t){"use strict";t.r(n);t(1);var s=t(3),i=t.n(s),r=t(0);var a=function(){return Object(r.jsx)("div",{className:"App",children:Object(r.jsx)("h1",{children:"Rest Api Page"})})};i.a.render(Object(r.jsx)(a,{}),document.getElementById("root"))}},[[9,1,2]]]);
-//# sourceMappingURL=main.0922a454.chunk.js.map
