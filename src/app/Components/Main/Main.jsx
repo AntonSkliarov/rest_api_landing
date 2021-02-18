@@ -1,21 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Section } from './components/Section';
 import './Main.sass';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Main = () => {
+  useEffect(() => {
+    const sections = document.querySelectorAll('.section');
+    [...sections].forEach(section => {
+      gsap.from(section, {
+        duration: 1,
+        alpha: 0,
+        y: 300,
+        scrollTrigger: {
+          trigger: section,
+          // markers: true,
+          // start: 'top center'
+        }
+      })
+    })
+  }, [])
+
   return (
     <main className="main">
-      <Section color={'transparent'} type={'gallery'}/>
+      <Section type={'transparent'} />
 
-      <Section color={'aqua'} />
+      <Section type={'gallery'} />
 
-      <Section color={'transparent'} />
+      <Section type={'transparent'} />
 
-      <Section color={'pink'} />
+      <Section type={'info'} />
 
-      <Section color={'transparent'} />
+      <Section type={'transparent'} />
 
-      <Section color={'chocolate'}/>
+      <Section type={'about'} />
     </main>
   );
 }
