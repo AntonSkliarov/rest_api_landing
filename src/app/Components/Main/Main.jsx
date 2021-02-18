@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export const Main = () => {
+
   useEffect(() => {
     const sections = document.querySelectorAll('.section');
     [...sections].forEach(section => {
@@ -16,8 +17,6 @@ export const Main = () => {
         y: 300,
         scrollTrigger: {
           trigger: section,
-          // markers: true,
-          // start: 'top center'
         }
       })
     })
@@ -25,6 +24,7 @@ export const Main = () => {
 
   return (
     <main className="main">
+
       <Section type={'transparent'} />
 
       <Section type={'gallery'} />
